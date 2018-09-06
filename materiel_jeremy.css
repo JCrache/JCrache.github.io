@@ -1,0 +1,133 @@
+body{
+	min-width: 826px;
+	font-family: calibri;
+	min-height: 800px;
+}
+
+#materiel {
+	color: darkblue;
+	font-size: 130%;
+	font-family: verdana;
+	margin-bottom: 10px;
+}
+
+#tableau {
+	border: 1px solid hsl(0,0%,92%);
+}
+
+#tableau td{
+	padding-bottom: 20px;
+	padding-top: 1px;
+}
+
+.texte_en_valeur{
+	font-weight: bold;
+}
+
+table{
+	width:100%;
+}
+
+#designation{
+	float:right;
+	width:55%;
+}
+
+.column {
+	width:33%;
+}
+
+.column th{
+	text-align: left;
+	font-weight: normal;
+}
+
+.sub_tab td{
+	width:50%;
+	padding-right:5%;
+	padding-bottom: 0px;
+}
+
+input{
+	width:100%;
+	background-color:hsl(0,0%,95%);
+	padding-left: 3%;
+}
+
+#categorie{
+	width:100%;
+}
+
+#type_sor{
+	width: 60%;
+	float: right;
+}
+
+#boutons td{
+	width:100%;
+	padding: 5px;
+}
+
+.bouton{
+	height: 25px;
+	width: 30%;
+	margin: 2px;
+	float: right;
+	overflow: hidden;
+	color: white;
+	font-weight: bold;
+}
+
+#bouton1{
+	background-color: rgb(230,50,50);
+}
+#bouton2{
+	background-color: rgb(70,190,40);
+}
+#bouton3{
+	background-color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
