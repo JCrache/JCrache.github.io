@@ -2,11 +2,12 @@
 <html lang="fr">
 
 	<head>
-		<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+		<meta charset="ISO-8859-1">
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 		<title>Matériel</title>
 		<link rel="stylesheet" href="materiel_jeremy.css" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script type="text/javascript" src="materiel_jeremy.ts"></script>
+		<script src="materiel_jeremy.ts"></script>
 	</head>	
 
 	<body>
@@ -27,7 +28,7 @@
 							</tr>
 							<tr>
 								<td>
-									<select class="custom_select" name="CatÃ©gorie" id="categorie">
+									<select class="custom_select" name="Catégorie" id="categorie">
 											<option>cat-01</option>
 											<option>cat-02</option>
 											<option>cat-03</option>
@@ -88,8 +89,63 @@
 		</table>
 		</div>
 		
+		<div id="mymenu">
+			<ul role="tablist" id="onglets">
+				<li role="tab" id="onglet-1" tabindex="0" aria-selected="true" aria-controls="panneau-1"><i class="fa fa-file fa-fw"></i>Références client</li>
+				<li role="tab" id="onglet-2" tabindex="-1" aria-selected="false" aria-controls="panneau-2"><i class="fa fa-medkit fa-fw"></i>Système</li>
+				<li role="tab" id="onglet-3" tabindex="-1" aria-selected="false" aria-controls="panneau-3"><i class="fa fa-cog fa-fw"></i>Sous-ensembles</li>
+				<li role="tab" id="onglet-4" tabindex="-1" aria-selected="false" aria-controls="panneau-4"><i class="fa fa-tachometer fa-fw"></i>Bulletins d'évolution</li>
+				<li role="tab" id="onglet-5" tabindex="-1" aria-selected="false" aria-controls="panneau-5"><i class="fa fa-wrench fa-fw"></i>Composants</li>
+				<li role="tab" id="onglet-6" tabindex="-1" aria-selected="false" aria-controls="panneau-6"><i class="fa fa-folder fa-fw"></i>Alertes</li>
+			</ul>
+		</div>
+		<div role="tabpanel" id="panneau-1" aria-labelledby="onglet-1">
+			[Contenu du premier panneau]
+		</div>
+		<div role="tabpanel" id="panneau-2" aria-labelledby="onglet-2">
+			[Contenu du deuxième panneau]
+		</div>
+		<div role="tabpanel" id="panneau-3" aria-labelledby="onglet-3">
+			[Contenu du troisième panneau (masqué)]
+		</div>
+		<div role="tabpanel" id="panneau-4" aria-labelledby="onglet-4">
+			[Contenu du quatrième panneau (masqué)]
+		</div>
+		<div role="tabpanel" id="panneau-5" aria-labelledby="onglet-5">
+			[Contenu du troisième panneau (masqué)]
+		</div>
+		<div role="tabpanel" id="panneau-6" aria-labelledby="onglet-6">
+			[Contenu du quatrième panneau (masqué)]
+		</div>
 		
 		
 	</body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

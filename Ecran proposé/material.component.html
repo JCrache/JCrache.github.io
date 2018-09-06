@@ -1,0 +1,106 @@
+<div class="card jh-card">
+    <h2 id="page-heading">
+        <span jhiTranslate="qualexNgApp.material.home.title">Materials</span>
+        <button id="jh-import-material" class="btn btn-primary float-right" (click)="onMaterialBEVClick()">
+            <span class="fas fa-upload"></span>
+            <span jhiTranslate="qualexNgApp.material.home.importMaterials">
+                Import Materials
+            </span>
+        </button>
+        <button id="jh-import-parts" class="btn btn-primary float-right" (click)="onImportPartsClick()">
+            <span class="fas fa-upload"></span>
+            <span jhiTranslate="qualexNgApp.material.home.importParts">
+                Import Parts
+            </span>
+        </button>
+        <button id="jh-import-parts" class="btn btn-primary float-right" (click)="onImportBEVClick()">
+            <span class="fas fa-upload"></span>
+            <span jhiTranslate="qualexNgApp.material.home.importBEVs">
+                Import BEV
+            </span>
+        </button>
+    </h2>
+    <jhi-alert></jhi-alert>
+    <jhi-alert-error></jhi-alert-error>
+    <br/>
+    <div class="table-responsive" *ngIf="materials">
+        <table class="table table-striped">
+            <thead>
+                <tr jhiSort [(predicate)]="predicate" [(ascending)]="reverse" [callback]="transition.bind(this)" class="headerWithFilter">
+                    <th jhiSortBy="numLegende">
+                        <span jhiTranslate="qualexNgApp.material.numLegende">Legende Number</span>
+                        <span class="fas fa-sort"></span>
+                    </th>
+                    <th jhiSortBy="label">
+                        <span jhiTranslate="qualexNgApp.material.designation">Designation</span>
+                        <span class="fas fa-sort"></span>
+                    </th>
+                    <th jhiSortBy="labelEn">
+                        <span jhiTranslate="qualexNgApp.material.designationENG">ENG Designation</span>
+                        <span class="fas fa-sort"></span>
+                    </th>
+                    <th></th>
+                </tr>
+                <tr class="headerFilterRow">
+                    <th><jhi-input-string-filter [(value)]="filters.numLegende.value" (valueChange)="onChangeFilter()"></jhi-input-string-filter></th>
+                    <th><jhi-input-string-filter [(value)]="filters.label.value" (valueChange)="onChangeFilter()"></jhi-input-string-filter></th>
+                    <th><jhi-input-string-filter [(value)]="filters.labelEn.value" (valueChange)="onChangeFilter()"></jhi-input-string-filter></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let material of materials ;trackBy: trackId">
+                    <td>{{material.numLegende}}</td>
+                    <td class="sized">{{material.type}} {{material.label}}</td>
+                    <td class="sized">{{material.labelEn}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit" [routerLink]="['/material', material.id, 'edit']" class="btn btn-primary btn-sm">
+                                <span class="fas fa-pencil-alt"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+                            </button>
+                            <button type="submit" [routerLink]="['/', { outlets: { popup: 'material/'+ material.id + '/delete'} }]" replaceUrl="true"
+                                queryParamsHandling="merge" class="btn btn-danger btn-sm">
+                                <span class="fas fa-times"></span>
+                                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="materials && materials.length">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="queryCount" [maxSize]="5" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <div class="row justify-content-center">
+            <ngb-pagination [collectionSize]="totalItems" [(page)]="page" [pageSize]="itemsPerPage" [maxSize]="5" [rotate]="true" [boundaryLinks]="true"
+                (pageChange)="loadPage(page)"></ngb-pagination>
+        </div>
+    </div>
+</div>
+
+<!-- Part Import dialog -->
+<div *ngIf="partImportDialogDisplayed">
+    <p-dialog header="{{'qualexNgApp.material.home.importParts' | translate}}" [(visible)]="partImportDialogDisplayed" [responsive]="true"
+        showEffect="fade" [modal]="true" [width]="900">
+        <jhi-import-from-file importType="parts"></jhi-import-from-file>
+    </p-dialog>
+</div>
+
+<!-- BEV Import dialog -->
+<div *ngIf="bevImportDialogDisplayed">
+    <p-dialog header="{{'qualexNgApp.material.home.importBEVs' | translate}}" [(visible)]="bevImportDialogDisplayed" [responsive]="true"
+        showEffect="fade" [modal]="true" [width]="900">
+        <jhi-import-from-file importType="bev"></jhi-import-from-file>
+    </p-dialog>
+</div>
+
+<!-- Material Import dialog -->
+<div *ngIf="materialImportDialogDisplayed">
+    <p-dialog header="{{'qualexNgApp.material.home.importMaterials' | translate}}" [(visible)]="materialImportDialogDisplayed"
+        [responsive]="true" showEffect="fade" [modal]="true" [width]="900">
+        <jhi-import-from-file importType="materials" (importSuccess)="loadAll()"></jhi-import-from-file>
+    </p-dialog>
+</div>

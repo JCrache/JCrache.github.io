@@ -88,9 +88,28 @@ input{
 	background-color: gray;
 }
 
+#mymenu{
+	margin:none;
+}
 
+#mymenu ul li{
+	display:inline-block;
+    float:left;
+    height:26px;
+    min-width:80px;
+    text-align:center;
+    line-height: 25px;
+    padding:0 8px 0 8px;
+    margin: 1px 0px 0px 0px;
+    border: 1px solid gray;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;	
+    background:#F0F0F0;
+}
 
-
+[role="tabpanel"][aria-selected="false"] {
+  display: none;
+}
 
 
 
