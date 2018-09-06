@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="ISO-8859-1">
 		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-		<title>MatÃ©riel</title>
+		<title>Matériel</title>
 		<link rel="stylesheet" href="materiel_jeremy.css" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="materiel_jeremy.ts"></script>
@@ -12,23 +12,23 @@
 
 	<body>
 
-		<div><span id="materiel">MatÃ©riel nÂ° 120256</span></div>
+		<div><span id="materiel">Matériel n° 120256</span></div>
 		
 		<div>
 		<table id="tableau">
 			<tr>
 				<td class="column"><table>
-					<tr><td>&nbsp;DÃ©signation: <span id="design" class="texte_en_valeur"></span></td></tr>
-					<tr><td>&nbsp;MatÃ©riel soumis Ã Â ACQ: <span class="texte_en_valeur">Oui</span></td></tr>
+					<tr><td>&nbsp;Désignation: <span id="design" class="texte_en_valeur"></span></td></tr>
+					<tr><td>&nbsp;Matériel soumis à ACQ: <span class="texte_en_valeur">Oui</span></td></tr>
 					<tr><td>
 						<table class="sub_tab">
 							<tr>
-								<th>CatÃ©gorie</th>
-								<th>Mise Ã Â  niveau</th>
+								<th>Catégorie</th>
+								<th>Mise à  niveau</th>
 							</tr>
 							<tr>
 								<td>
-									<select class="custom_select" name="Catï¿½gorie" id="categorie">
+									<select class="custom_select" name="Catégorie" id="categorie">
 											<option>cat-01</option>
 											<option>cat-02</option>
 											<option>cat-03</option>
@@ -40,12 +40,12 @@
 					</td></tr>
 				</table></td>
 				<td class="column"><table>
-					<tr><td>&nbsp;DÃ©signation <input id="designation" name="designation"></td></tr>
-					<tr><td>&nbsp;MatÃ©riel pÃ©rennisÃ©: <span class="texte_en_valeur">Non</span></td></tr>
+					<tr><td>&nbsp;Désignation <input id="designation" name="designation"></td></tr>
+					<tr><td>&nbsp;Matériel pérennisé: <span class="texte_en_valeur">Non</span></td></tr>
 					<tr><td>
 						<table class="sub_tab">
 							<tr>
-								<th>PrÃ©ventif</th>
+								<th>Préventif</th>
 								<th>Correctif</th>
 							</tr>
 							<tr>
@@ -56,7 +56,7 @@
 					</td></tr>
 				</table></td>
 				<td class="column"><table>
-					<tr><td>&nbsp;Temps thÃ©orique de rÃ©paration: <span class="texte_en_valeur">TODO</span></td></tr>
+					<tr><td>&nbsp;Temps théorique de réparation: <span class="texte_en_valeur">TODO</span></td></tr>
 					<tr><td>&nbsp;Type de SOR <select class="custom_select" name="Type de SOR" id="type_sor">
 											<option>1</option>
 											<option>2</option>
@@ -67,7 +67,7 @@
 						<table class="sub_tab">
 							<tr>
 								<th>Requalification</th>
-								<th>MatÃ©riel rÃ©formÃ©</th>
+								<th>Matériel réformé</th>
 							</tr>
 							<tr>
 								<td><input name="requal" value="36"></td>
@@ -91,31 +91,32 @@
 		
 		<div id="mymenu">
 			<ul role="tablist" id="onglets">
-				<li role="tab" id="onglet-1" tabindex="0" aria-selected="true" aria-controls="panneau-1"><i class="fa fa-file fa-fw"></i>Rï¿½fï¿½rences client</li>
-				<li role="tab" id="onglet-2" tabindex="-1" aria-selected="false" aria-controls="panneau-2"><i class="fa fa-medkit fa-fw"></i>Systï¿½me</li>
-				<li role="tab" id="onglet-3" tabindex="-1" aria-selected="false" aria-controls="panneau-3"><i class="fa fa-cog fa-fw"></i>Sous-ensembles</li>
-				<li role="tab" id="onglet-4" tabindex="-1" aria-selected="false" aria-controls="panneau-4"><i class="fa fa-tachometer fa-fw"></i>Bulletins d'ï¿½volution</li>
-				<li role="tab" id="onglet-5" tabindex="-1" aria-selected="false" aria-controls="panneau-5"><i class="fa fa-wrench fa-fw"></i>Composants</li>
-				<li role="tab" id="onglet-6" tabindex="-1" aria-selected="false" aria-controls="panneau-6"><i class="fa fa-folder fa-fw"></i>Alertes</li>
+				<li role="tab" aria-controls="panneau-1"><i class="fa fa-file fa-fw"></i>Références client</li>
+				<li role="tab" aria-controls="panneau-2"><i class="fa fa-medkit fa-fw"></i>Système</li>
+				<li role="tab" aria-controls="panneau-3"><i class="fa fa-cog fa-fw"></i>Sous-ensembles</li>
+				<li role="tab" aria-controls="panneau-4"><i class="fa fa-tachometer fa-fw"></i>Bulletins d'évolution</li>
+				<li role="tab" aria-controls="panneau-5"><i class="fa fa-wrench fa-fw"></i>Composants</li>
+				<li role="tab" aria-controls="panneau-6"><i class="fa fa-folder fa-fw"></i>Alertes</li>
 			</ul>
+			<br>
 		</div>
-		<div role="tabpanel" id="panneau-1" aria-labelledby="onglet-1">
-			[Contenu du premier panneau]
+		<div role="tabpanel" id="panneau-1">
+			<p>[Contenu du premier panneau]</p>
 		</div>
-		<div role="tabpanel" id="panneau-2" aria-labelledby="onglet-2">
-			[Contenu du deuxiÃ¨me panneau]
+		<div role="tabpanel" id="panneau-2">
+			<p>[Contenu du 2eme panneau]</p>
 		</div>
-		<div role="tabpanel" id="panneau-3" aria-labelledby="onglet-3">
-			[Contenu du troisiÃ¨me panneau (masquï¿½)]
+		<div role="tabpanel" id="panneau-3">
+			[Contenu du troisième panneau]
 		</div>
-		<div role="tabpanel" id="panneau-4" aria-labelledby="onglet-4">
-			[Contenu du quatriÃ¨me panneau (masquï¿½)]
+		<div role="tabpanel" id="panneau-4">
+			[Contenu du quatrième panneau]
 		</div>
-		<div role="tabpanel" id="panneau-5" aria-labelledby="onglet-5">
-			[Contenu du troisiÃ¨me panneau (masquï¿½)]
+		<div role="tabpanel" id="panneau-5">
+			[Contenu du cinquième panneau]
 		</div>
-		<div role="tabpanel" id="panneau-6" aria-labelledby="onglet-6">
-			[Contenu du quatriÃ¨me panneau (masquï¿½)]
+		<div role="tabpanel" id="panneau-6">
+			[Contenu du sixième panneau]
 		</div>
 		
 		
