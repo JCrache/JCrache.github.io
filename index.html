@@ -8,7 +8,6 @@
 		<link rel="stylesheet" href="materiel_jeremy.css" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="materiel_jeremy.ts"></script>
-		<script src="tablist.js"></script>
 	</head>	
 
 	<body>
@@ -90,36 +89,44 @@
 		</table>
 		</div>
 		
-		<div id="mymenu">
-			<ul role="tablist" id="onglets">
-				<li role="tab" aria-controls="panneau-1"><i class="fa fa-file fa-fw"></i>Références client</li>
-				<li role="tab" aria-controls="panneau-2" data-open="true"><i class="fa fa-medkit fa-fw"></i>Système</li>
-				<li role="tab" aria-controls="panneau-3"><i class="fa fa-cog fa-fw"></i>Sous-ensembles</li>
-				<li role="tab" aria-controls="panneau-4"><i class="fa fa-tachometer fa-fw"></i>Bulletins d'évolution</li>
-				<li role="tab" aria-controls="panneau-5"><i class="fa fa-wrench fa-fw"></i>Composants</li>
-				<li role="tab" aria-controls="panneau-6"><i class="fa fa-folder fa-fw"></i>Alertes</li>
-			</ul>
-			<br>
+		<div class="tabpanels">
+			<details id="details-panel1">
+				<summary><i class="fa fa-file fa-fw"></i>Références client</summary>
+				<p>
+					Références clientRéférences clientRéférences clientRéférences clientRéférences client
+				</p>
+			</details>
+			<details id="details-panel2">
+				<summary><i class="fa fa-medkit fa-fw"></i>Système</summary>
+				<p>
+					SystèmeSystèmeSystème SystèmeSystèmeSystèmeSystèmeSystème SystèmeSystèmeSystèmeSystèmeSystème
+				</p>
+			</details>
+			<details id="details-panel3">
+				<summary><i class="fa fa-cog fa-fw"></i>Sous-ensembles</summary>
+				<p>
+					Sous-ensemblesSous-ensemblesSous-ensembles Sous-ensemblesSous-ensemblesSous-ensembles Sous-ensemblesSous-ensemblesSous-ensemblesSous-ensembles
+				</p>
+			</details>
+			<details id="details-panel4">
+				<summary><i class="fa fa-tachometer fa-fw"></i>Bulletins d'évolution</summary>
+				<p>
+					Bulletins d'évolutionBulletins d'évolutionBulletins d'évolutionBulletins d'évolutionBulletins d'évolution
+				</p>
+			</details>
+			<details id="details-panel5">
+				<summary><i class="fa fa-wrench fa-fw"></i>Composants</summary>
+				<p>
+					ComposantsComposantsComposantsComposants
+				</p>
+			</details>
+			<details id="details-panel6">
+				<summary><i class="fa fa-folder fa-fw"></i>Alertes</summary>
+				<p>
+					AlertesAlertesAlertes AlertesAlertesAlertesAlertesAlertesAlertesAlertesAlertesAlertesAlertes
+				</p>
+			</details>
 		</div>
-		<div role="tabpanel" id="panneau-1">
-			<p>[Contenu du premier panneau]</p>
-		</div>
-		<div role="tabpanel" id="panneau-2">
-			<p>[Contenu du 2eme panneau]</p>
-		</div>
-		<div role="tabpanel" id="panneau-3">
-			[Contenu du troisième panneau]
-		</div>
-		<div role="tabpanel" id="panneau-4">
-			[Contenu du quatrième panneau]
-		</div>
-		<div role="tabpanel" id="panneau-5">
-			[Contenu du cinquième panneau]
-		</div>
-		<div role="tabpanel" id="panneau-6">
-			[Contenu du sixième panneau]
-		</div>
-		
 		
 	</body>
 

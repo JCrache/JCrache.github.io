@@ -92,7 +92,8 @@ input{
 	margin:none;
 }
 
-#mymenu ul li{
+.tabpanels details{
+	cursor:pointer;
 	display:inline-block;
     float:left;
     height:26px;
@@ -107,13 +108,16 @@ input{
     background:#F0F0F0;
 }
 
-[role=tabpanel][aria-hidden=true] {
-  display: none;
+summary::-webkit-details-marker {
+   color:#ADCA48;
+   background:#ADCA48;
 }
 
-
-
-
+details[open] summary::-webkit-details-marker {
+   color:#eaeaea;
+   background:#eaeaea;
+   outline: 2px solid #ADCA48;
+}
 
 
 
