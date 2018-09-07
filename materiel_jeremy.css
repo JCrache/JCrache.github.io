@@ -31,6 +31,7 @@ table{
 #designation{
 	float:right;
 	width:55%;
+	margin-right:2%;
 }
 
 .column {
@@ -98,9 +99,10 @@ input{
     float:left;
     height:26px;
     min-width:80px;
+	max-width:160px;
     text-align:center;
     line-height: 25px;
-    padding:0 8px 0 8px;
+    padding:0 6px 0 6px;
     margin: 1px 0px 0px 0px;
     border: 1px solid gray;
     border-top-left-radius: 3px;
@@ -108,16 +110,47 @@ input{
     background:#F0F0F0;
 }
 
-summary::-webkit-details-marker {
-   color:#ADCA48;
-   background:#ADCA48;
+details > summary {
+	list-style: none;
+}
+details > summary::-webkit-details-marker {
+	display: none;
 }
 
-details[open] summary::-webkit-details-marker {
-   color:#eaeaea;
-   background:#eaeaea;
-   outline: 2px solid #ADCA48;
+details > p {
+	position: absolute;
 }
+
+details[open] > p{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
