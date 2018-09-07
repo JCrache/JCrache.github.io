@@ -49,6 +49,10 @@ table{
 	padding-bottom: 0px;
 }
 
+tl{
+	position: absolute;
+}
+
 input{
 	width:100%;
 	background-color:hsl(0,0%,95%);
