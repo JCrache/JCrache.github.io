@@ -8,6 +8,7 @@
 		<link rel="stylesheet" href="materiel_jeremy.css" type="text/css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="materiel_jeremy.ts"></script>
+		<script src="tablist.js"></script>
 	</head>	
 
 	<body>
@@ -40,7 +41,7 @@
 					</td></tr>
 				</table></td>
 				<td class="column"><table>
-					<tr><td>&nbsp;Désignation <input id="designation" name="designation"></td></tr>
+					<tr><td>&nbsp;Désignation <input id="designation" name="designation" maxlength="32"></td></tr>
 					<tr><td>&nbsp;Matériel pérennisé: <span class="texte_en_valeur">Non</span></td></tr>
 					<tr><td>
 						<table class="sub_tab">
@@ -92,7 +93,7 @@
 		<div id="mymenu">
 			<ul role="tablist" id="onglets">
 				<li role="tab" aria-controls="panneau-1"><i class="fa fa-file fa-fw"></i>Références client</li>
-				<li role="tab" aria-controls="panneau-2"><i class="fa fa-medkit fa-fw"></i>Système</li>
+				<li role="tab" aria-controls="panneau-2" data-open="true"><i class="fa fa-medkit fa-fw"></i>Système</li>
 				<li role="tab" aria-controls="panneau-3"><i class="fa fa-cog fa-fw"></i>Sous-ensembles</li>
 				<li role="tab" aria-controls="panneau-4"><i class="fa fa-tachometer fa-fw"></i>Bulletins d'évolution</li>
 				<li role="tab" aria-controls="panneau-5"><i class="fa fa-wrench fa-fw"></i>Composants</li>

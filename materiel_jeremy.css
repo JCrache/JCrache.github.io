@@ -107,7 +107,7 @@ input{
     background:#F0F0F0;
 }
 
-[role="tabpanel"][aria-hidden="true"] {
+[role=tabpanel][aria-hidden=true] {
   display: none;
 }
 

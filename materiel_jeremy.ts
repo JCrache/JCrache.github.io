@@ -4,8 +4,12 @@ function validate(){
 } 
 
 let list = document.querySelector( '[role="tablist"]' );
-let tablist = new window.Tablist( list );
 
+Array.prototype.forEach.call( lists, function( list ) {
+  new window.Tablist( list ).mount();
+});
+
+let tablist = new window.Tablist( list );
 
 // démarage du plugin
 tablist.mount();
