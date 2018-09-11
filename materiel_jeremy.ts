@@ -7,8 +7,8 @@ function autocolor(){
 	
 	let couleur = "#";
 	
-	let i;
-	for (i = 0; i < 6; i++){
+	
+	for (let i = 0; i < 6; i++){
 		let a = 2+Math.floor(14*Math.random());
 		a = a.toString();
 		switch(a){
