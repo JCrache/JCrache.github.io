@@ -82,14 +82,16 @@
 				<td></td>
 				<td></td>
 				<td id="boutons">
-					<input class="bouton" id="bouton1" type="button" value="Supprimer">
+					<input class="bouton" id="bouton1" type="button" value="Supprimer" onclick="alert('supp')">
 					<input class="bouton" id="bouton2" type="button" value="Valider" onclick="validate()">
-					<input class="bouton" id="bouton3" type="button" value="Annuler" onclick="changecolor()">
+					<input class="bouton" id="bouton3" type="button" value="Annuler" ontouch="changecolor()" onclick="changecolor()">
 				</td>
 			</tr>
 		</table>
 		</div>
-		
+		<br>
+		<span id="chgt" ontouch="changecolor()" onclick="changecolor()">Changer couleur</span>
+		<br>
 		<div class="tabpanels">
 			<details id="details-panel1">
 				<summary><i class="fa fa-file fa-fw"></i>Références client</summary>

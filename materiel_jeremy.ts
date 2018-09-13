@@ -9,8 +9,9 @@ function autocolor(){
 	
 	
 	for (let i = 0; i < 6; i++){
-		let a = 2+Math.floor(14*Math.random());
-		a = a.toString();
+		let b = 2+Math.floor(14*Math.random());
+		let a;
+		a = b.toString();
 		switch(a){
 			case "10":
 				a = "A";
