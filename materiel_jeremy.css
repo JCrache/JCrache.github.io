@@ -93,6 +93,12 @@ input{
 	background-color: gray;
 }
 
+#chgt {
+	cursor: pointer;
+	background-color: #F0F0F0;
+	border: 1px solid #AAAAAA;
+}
+
 #mymenu{
 	margin:none;
 }
@@ -124,55 +130,6 @@ details > summary::-webkit-details-marker {
 details > p {
 	position: absolute;
 }
-
-details[open] > p{
-	
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
